@@ -7,35 +7,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * { box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; }
-        body { color: #333; line-height: 1.6; background-color: #f8fafc; padding: 20px 10px; }
-        .wrapper { max-width: 1000px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        body { color: #333; line-height: 1.6; background-color: #f8fafc; padding: 10px; }
+        .wrapper { max-width: 1000px; margin: 0 auto; background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
         
-        .top-contact-bar { background: #1e293b; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; flex-wrap: wrap; gap: 15px; border-radius: 8px; margin-bottom: 30px; }
-        .top-area { font-size: 16px; color: #cbd5e1; font-weight: 500; }
+        .top-contact-bar { background: #1e293b; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; flex-wrap: wrap; gap: 10px; border-radius: 8px; margin-bottom: 25px; }
+        .top-area { font-size: 15px; color: #cbd5e1; font-weight: 500; }
         .top-area span { color: #fff; font-weight: 700; border-bottom: 1px solid #3b82f6; }
-        .top-phone-wrap { display: flex; align-items: center; gap: 15px; }
-        .top-phone-label { font-size: 15px; color: #94a3b8; }
-        .top-phone-number { font-size: 28px; font-weight: 700; color: #3b82f6; text-decoration: none; }
+        .top-phone-wrap { display: flex; align-items: center; gap: 10px; }
+        .top-phone-label { font-size: 14px; color: #94a3b8; }
+        .top-phone-number { font-size: 24px; font-weight: 700; color: #3b82f6; text-decoration: none; }
 
-        /* 로고 영역 */
         .header-logo { text-align: center; margin-bottom: 20px; }
-        .header-logo img { max-width: 250px; height: auto; }
+        .header-logo img { max-width: 150px; height: auto; } /* 로고 기본크기 축소 */
 
-        .nav-bar { display: flex; gap: 25px; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 40px; flex-wrap: wrap; }
-        .nav-bar a { text-decoration: none; color: #64748b; font-size: 18px; font-weight: 500; }
+        .nav-bar { display: flex; gap: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px; margin-bottom: 30px; flex-wrap: wrap; justify-content: center; }
+        .nav-bar a { text-decoration: none; color: #64748b; font-size: 17px; font-weight: 500; }
         .nav-bar a:hover, .nav-bar a.active { color: #2563eb; font-weight: 700; }
 
         .hero-section { margin-bottom: 40px; border-radius: 8px; overflow: hidden; }
         .hero-section img { width: 100%; height: auto; display: block; }
-
         .as-guarantee-section { background: #eff6ff; padding: 45px 30px; text-align: center; border: 1px solid #bfdbfe; border-radius: 8px; margin-bottom: 50px; }
         .as-badge { display: inline-block; background: #2563eb; color: #fff; padding: 6px 16px; font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px; border-radius: 4px; }
-        .as-title { font-size: 28px; font-weight: 700; color: #1e293b; margin-bottom: 15px; }
-        .as-desc { font-size: 17px; color: #475569; max-width: 750px; margin: 0 auto; word-break: keep-all; }
+        .as-title { font-size: 26px; font-weight: 700; color: #1e293b; margin-bottom: 15px; }
+        .as-desc { font-size: 16px; color: #475569; max-width: 750px; margin: 0 auto; word-break: keep-all; }
         .as-desc strong { color: #1d4ed8; }
-        
-        .section-title { font-size: 26px; font-weight: 700; color: #111; margin: 50px 0 25px; border-left: 5px solid #2563eb; padding-left: 15px; letter-spacing: -0.5px; }
-
+        .section-title { font-size: 24px; font-weight: 700; color: #111; margin: 50px 0 25px; border-left: 5px solid #2563eb; padding-left: 15px; letter-spacing: -0.5px; }
         .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px; }
         .card { background: #fff; border: 1px solid #e2e8f0; padding: 30px; border-top: 4px solid #1e293b; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
         .card h3 { font-size: 19px; color: #0f172a; margin-bottom: 15px; font-weight: 700; }
@@ -55,27 +51,34 @@
         .img-label { padding: 12px; font-weight: 700; color: #fff; text-align: center; font-size: 16px; letter-spacing: 1px; }
         .img-item img { width: 100%; height: auto; display: block; }
 
-        .site-footer { margin-top: 50px; background: #1e293b; color: #fff; text-align: center; padding: 40px 20px; border-radius: 8px; }
-        .footer-name { font-size: 18px; color: #94a3b8; margin-bottom: 10px; }
-        .footer-phone { font-size: 32px; font-weight: 700; margin-bottom: 25px; }
+        .site-footer { margin-top: 50px; background: #1e293b; color: #fff; text-align: center; padding: 30px 15px; border-radius: 8px; }
+        .footer-name { font-size: 16px; color: #94a3b8; margin-bottom: 10px; }
+        .footer-phone { font-size: 28px; font-weight: 700; margin-bottom: 20px; }
         .footer-phone a { color: #3b82f6 !important; text-decoration: none; }
-        .kakao-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #FEE500; color: #371D1E; font-size: 18px; font-weight: 700; text-decoration: none; padding: 15px 30px; border-radius: 50px; transition: 0.3s; }
-        .kakao-btn img { width: 28px; height: 28px; }
+        .kakao-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #FEE500; color: #371D1E; font-size: 16px; font-weight: 700; text-decoration: none; padding: 12px 24px; border-radius: 50px; transition: 0.3s; }
+        .kakao-btn img { width: 24px; height: 24px; }
 
+        /* 모바일 최적화 (글자 및 로고 확 줄임) */
         @media (max-width: 768px) {
-            .wrapper { padding: 20px; }
-            .top-contact-bar { flex-direction: column; align-items: flex-start; padding: 20px; }
-            .top-phone-number { font-size: 24px; }
-            .as-title { font-size: 24px; }
-            .vs-container { flex-direction: column; padding: 20px; }
+            .wrapper { padding: 15px; }
+            .top-contact-bar { flex-direction: column; align-items: center; padding: 15px; text-align: center; gap: 5px; }
+            .top-area { font-size: 13px; word-break: keep-all; line-height: 1.4; }
+            .top-phone-wrap { flex-direction: column; gap: 2px; }
+            .top-phone-label { font-size: 12px; }
+            .top-phone-number { font-size: 20px; }
+            .header-logo img { max-width: 100px; } /* 모바일 로고 반의 반 */
+            .nav-bar { gap: 12px; }
+            .nav-bar a { font-size: 15px; }
+            .as-title { font-size: 22px; }
+            .vs-container { flex-direction: column; padding: 15px; }
             .img-area { flex-direction: column; }
-            .footer-phone { font-size: 26px; }
+            .footer-phone { font-size: 24px; }
+            .kakao-btn { font-size: 15px; padding: 10px 20px; width: 100%; max-width: 300px; }
         }
     </style>
 </head>
 <body>
     <div class="wrapper">
-        
         <div class="top-contact-bar">
             <div class="top-area">시공 가능 지역 : <span>서울 전 지역 및 경기 서북부 일대</span> (원거리 협의)</div>
             <div class="top-phone-wrap">
@@ -84,10 +87,9 @@
             </div>
         </div>
 
-        <!-- 로고 영역 -->
         <div class="header-logo">
             <a href="index.html">
-                <img src="./images/logo.jpg" alt="바른코트웍스 로고" onerror="this.src='https://placehold.co/250x80/e2e8f0/64748b?text=LOGO'">
+                <img src="./images/logo.jpg" alt="바른코트웍스 로고" onerror="this.src='https://placehold.co/150x50/e2e8f0/64748b?text=LOGO'">
             </a>
         </div>
 
@@ -100,7 +102,7 @@
         </div>
 
         <div class="hero-section">
-            <img src="./images/main-banner.jpg" alt="바른코트웍스 시공 대표 이미지" onerror="this.src='https://placehold.co/1000x400/e2e8f0/64748b?text=Main+Banner+Image'">
+            <img src="./images/main-banner.jpg" alt="바른코트웍스 시공 대표 이미지" onerror="this.src='https://placehold.co/1000x400/e2e8f0/64748b?text=Main+Banner'">
         </div>
 
         <div class="as-guarantee-section">
@@ -152,10 +154,12 @@
         <div class="img-area">
             <div class="img-item">
                 <div class="img-label" style="background:#1e293b;">BEFORE (시공 전)</div>
+                <!-- 💡 메인 비포 이미지 -->
                 <img src="./images/before.jpg" alt="시공 전" onerror="this.src='https://placehold.co/400x350/e2e8f0/64748b?text=Before'">
             </div>
             <div class="img-item">
                 <div class="img-label" style="background:#2563eb;">AFTER (시공 후)</div>
+                <!-- 💡 메인 애프터 이미지 -->
                 <img src="./images/after.jpg" alt="시공 후" onerror="this.src='https://placehold.co/400x350/e2e8f0/64748b?text=After'">
             </div>
         </div>
@@ -168,7 +172,6 @@
                 카카오톡 오픈채팅 상담하기
             </a>
         </div>
-
     </div>
 </body>
 </html>
