@@ -9,6 +9,16 @@
         * { box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; }
         body { color: #333; line-height: 1.6; background-color: #f8fafc; padding: 20px 10px; }
         .wrapper { max-width: 1000px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        
+        .top-contact-bar { background: #1e293b; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; flex-wrap: wrap; gap: 15px; border-radius: 8px; margin-bottom: 30px; }
+        .top-phone-wrap { display: flex; align-items: center; gap: 15px; }
+        .top-phone-label { font-size: 15px; color: #94a3b8; }
+        .top-phone-number { font-size: 28px; font-weight: 700; color: #3b82f6; text-decoration: none; }
+
+        /* 로고 영역 */
+        .header-logo { text-align: center; margin-bottom: 20px; }
+        .header-logo img { max-width: 250px; height: auto; }
+
         .nav-bar { display: flex; gap: 25px; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 40px; flex-wrap: wrap; }
         .nav-bar a { text-decoration: none; color: #64748b; font-size: 18px; font-weight: 500; }
         .nav-bar a:hover, .nav-bar a.active { color: #2563eb; font-weight: 700; }
@@ -21,7 +31,6 @@
         .cert-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; max-width: 600px; margin-bottom: 20px; }
         .cert-item img { width: 100%; border: 1px solid #cbd5e1; padding: 5px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-radius: 4px; }
         
-        /* 하단 공통 푸터 */
         .site-footer { margin-top: 50px; background: #1e293b; color: #fff; text-align: center; padding: 40px 20px; border-radius: 8px; }
         .footer-name { font-size: 18px; color: #94a3b8; margin-bottom: 10px; }
         .footer-phone { font-size: 32px; font-weight: 700; margin-bottom: 25px; }
@@ -30,6 +39,7 @@
         .kakao-btn img { width: 28px; height: 28px; }
         
         @media (max-width: 768px) {
+            .top-contact-bar { flex-direction: column; align-items: flex-start; padding: 20px; }
             .cert-grid-4 { grid-template-columns: repeat(2, 1fr); }
             .cert-grid-2 { grid-template-columns: 1fr; }
         }
@@ -37,6 +47,22 @@
 </head>
 <body>
     <div class="wrapper">
+        
+        <div class="top-contact-bar">
+            <div>시공 문의 및 상담 환영</div>
+            <div class="top-phone-wrap">
+                <span class="top-phone-label">이현욱 팀장</span>
+                <a href="tel:010-4222-8535" class="top-phone-number">010-4222-8535</a>
+            </div>
+        </div>
+
+        <!-- 로고 영역 -->
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="./images/logo.jpg" alt="바른코트웍스 로고" onerror="this.src='https://placehold.co/250x80/e2e8f0/64748b?text=LOGO'">
+            </a>
+        </div>
+
         <div class="nav-bar">
             <a href="index.html">홈</a>
             <a href="about.html">시공소개</a>
@@ -45,7 +71,6 @@
             <a href="certificate.html" class="active">시험성적표</a>
         </div>
 
-        <!-- 인증 1 -->
         <h2 class="section-title">1. 항곰팡 및 결로 저항성 인증</h2>
         <div class="cert-desc">
             국가공인시험기관을 통해 곰팡이 저항성 테스트를 통과하였습니다. 결로로 인한 베란다 유해균 번식을 효과적으로 차단합니다.
@@ -61,7 +86,6 @@
             <div class="cert-item"><img src="./images/cert_mold4.jpg" alt="결로저항 2"></div>
         </div>
 
-        <!-- 인증 2 -->
         <h2 class="section-title">2. 4대 중금속 및 유해물질 불검출</h2>
         <div class="cert-desc">
             납, 수은 등 인체에 치명적인 중금속 성분과 포름알데히드 등 새집증후군을 유발하는 휘발성 유기화합물(VOCs)이 검출되지 않은 안전한 자재입니다.
@@ -75,7 +99,6 @@
             <div class="cert-item"><img src="./images/cert_heavy2.jpg" alt="유해물질 2"></div>
         </div>
 
-        <!-- 인증 3 -->
         <h2 class="section-title">3. 건축자재 안전 인증</h2>
         <div class="cert-desc">
             실내공기질 시험을 통과한 자재에 부여되는 한국건설생활환경시험연구원 인증을 획득한 프리미엄 도료입니다.
@@ -89,7 +112,6 @@
             <div class="cert-item"><img src="./images/cert_safe2.jpg" alt="안전인증 2"></div>
         </div>
 
-        <!-- 하단 공통 연락처 -->
         <div class="site-footer">
             <div class="footer-name">바른코트웍스 시공 상담</div>
             <div class="footer-phone">이현욱 팀장 <a href="tel:010-4222-8535">010-4222-8535</a></div>
