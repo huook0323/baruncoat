@@ -9,6 +9,16 @@
         * { box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; }
         body { color: #333; line-height: 1.6; background-color: #f8fafc; padding: 20px 10px; }
         .wrapper { max-width: 1000px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        
+        .top-contact-bar { background: #1e293b; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; flex-wrap: wrap; gap: 15px; border-radius: 8px; margin-bottom: 30px; }
+        .top-phone-wrap { display: flex; align-items: center; gap: 15px; }
+        .top-phone-label { font-size: 15px; color: #94a3b8; }
+        .top-phone-number { font-size: 28px; font-weight: 700; color: #3b82f6; text-decoration: none; }
+
+        /* 로고 영역 */
+        .header-logo { text-align: center; margin-bottom: 20px; }
+        .header-logo img { max-width: 250px; height: auto; }
+
         .nav-bar { display: flex; gap: 25px; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 40px; flex-wrap: wrap; }
         .nav-bar a { text-decoration: none; color: #64748b; font-size: 18px; font-weight: 500; }
         .nav-bar a:hover, .nav-bar a.active { color: #2563eb; font-weight: 700; }
@@ -17,17 +27,36 @@
         .estimate-img { text-align: center; }
         .estimate-img img { max-width: 100%; height: auto; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
 
-        /* 하단 공통 푸터 */
         .site-footer { margin-top: 50px; background: #1e293b; color: #fff; text-align: center; padding: 40px 20px; border-radius: 8px; }
         .footer-name { font-size: 18px; color: #94a3b8; margin-bottom: 10px; }
         .footer-phone { font-size: 32px; font-weight: 700; margin-bottom: 25px; }
         .footer-phone a { color: #3b82f6 !important; text-decoration: none; }
         .kakao-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #FEE500; color: #371D1E; font-size: 18px; font-weight: 700; text-decoration: none; padding: 15px 30px; border-radius: 50px; transition: 0.3s; }
         .kakao-btn img { width: 28px; height: 28px; }
+
+        @media (max-width: 768px) {
+            .top-contact-bar { flex-direction: column; align-items: flex-start; padding: 20px; }
+        }
     </style>
 </head>
 <body>
     <div class="wrapper">
+        
+        <div class="top-contact-bar">
+            <div>시공 문의 및 상담 환영</div>
+            <div class="top-phone-wrap">
+                <span class="top-phone-label">이현욱 팀장</span>
+                <a href="tel:010-4222-8535" class="top-phone-number">010-4222-8535</a>
+            </div>
+        </div>
+
+        <!-- 로고 영역 -->
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="./images/logo.jpg" alt="바른코트웍스 로고" onerror="this.src='https://placehold.co/250x80/e2e8f0/64748b?text=LOGO'">
+            </a>
+        </div>
+
         <div class="nav-bar">
             <a href="index.html">홈</a>
             <a href="about.html">시공소개</a>
@@ -41,7 +70,6 @@
             <img src="./images/estimate.jpg" alt="표준견적표" onerror="this.src='https://placehold.co/800x1000/e2e8f0/64748b?text=Estimate+Image'">
         </div>
 
-        <!-- 하단 공통 연락처 -->
         <div class="site-footer">
             <div class="footer-name">바른코트웍스 시공 상담</div>
             <div class="footer-phone">이현욱 팀장 <a href="tel:010-4222-8535">010-4222-8535</a></div>
