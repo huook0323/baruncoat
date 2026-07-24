@@ -18,7 +18,7 @@
         .top-phone-number { font-size: 24px; font-weight: 700; color: #3b82f6; text-decoration: none; }
 
         .header-logo { text-align: center; margin-bottom: 20px; }
-        .header-logo img { max-width: 150px; height: auto; } /* 로고 기본크기 축소 */
+        .header-logo img { max-width: 150px; height: auto; }
 
         .nav-bar { display: flex; gap: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px; margin-bottom: 30px; flex-wrap: wrap; justify-content: center; }
         .nav-bar a { text-decoration: none; color: #64748b; font-size: 17px; font-weight: 500; }
@@ -58,7 +58,7 @@
         .kakao-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: #FEE500; color: #371D1E; font-size: 16px; font-weight: 700; text-decoration: none; padding: 12px 24px; border-radius: 50px; transition: 0.3s; }
         .kakao-btn img { width: 24px; height: 24px; }
 
-        /* 모바일 최적화 (글자 및 로고 확 줄임) */
+        /* 모바일 최적화 */
         @media (max-width: 768px) {
             .wrapper { padding: 15px; }
             .top-contact-bar { flex-direction: column; align-items: center; padding: 15px; text-align: center; gap: 5px; }
@@ -66,13 +66,14 @@
             .top-phone-wrap { flex-direction: column; gap: 2px; }
             .top-phone-label { font-size: 12px; }
             .top-phone-number { font-size: 20px; }
-            .header-logo img { max-width: 100px; } /* 모바일 로고 반의 반 */
+            .header-logo img { max-width: 100px; }
             .nav-bar { gap: 12px; }
             .nav-bar a { font-size: 15px; }
             .as-title { font-size: 22px; }
             .vs-container { flex-direction: column; padding: 15px; }
             .img-area { flex-direction: column; }
-            .footer-phone { font-size: 24px; }
+            /* 하단 연락처 한 줄로 나오게 크기 대폭 축소 */
+            .footer-phone { font-size: 18px; letter-spacing: -0.5px; white-space: nowrap; }
             .kakao-btn { font-size: 15px; padding: 10px 20px; width: 100%; max-width: 300px; }
         }
     </style>
@@ -80,9 +81,9 @@
 <body>
     <div class="wrapper">
         <div class="top-contact-bar">
-            <div class="top-area">시공 가능 지역 : <span>서울 전 지역 및 경기</span></div>
+            <div class="top-area">시공 가능 지역 : <span>서울 전 지역 및 경기 서북부 일대</span> (원거리 협의)</div>
             <div class="top-phone-wrap">
-                <span class="top-phone-label">이현욱 팀장</span>
+                <span class="top-phone-label">이현욱 대표</span>
                 <a href="tel:010-4222-8535" class="top-phone-number">010-4222-8535</a>
             </div>
         </div>
@@ -154,19 +155,17 @@
         <div class="img-area">
             <div class="img-item">
                 <div class="img-label" style="background:#1e293b;">BEFORE (시공 전)</div>
-                <!-- 💡 메인 비포 이미지 -->
                 <img src="./images/before.jpg" alt="시공 전" onerror="this.src='https://placehold.co/400x350/e2e8f0/64748b?text=Before'">
             </div>
             <div class="img-item">
                 <div class="img-label" style="background:#2563eb;">AFTER (시공 후)</div>
-                <!-- 💡 메인 애프터 이미지 -->
                 <img src="./images/after.jpg" alt="시공 후" onerror="this.src='https://placehold.co/400x350/e2e8f0/64748b?text=After'">
             </div>
         </div>
 
         <div class="site-footer">
             <div class="footer-name">바른코트웍스 시공 상담</div>
-            <div class="footer-phone">이현욱 팀장 <a href="tel:010-4222-8535">010-4222-8535</a></div>
+            <div class="footer-phone">이현욱 대표 <a href="tel:010-4222-8535">010-4222-8535</a></div>
             <a href="https://open.kakao.com/o/scSp5xFi" target="_blank" class="kakao-btn">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt="카카오톡">
                 카카오톡 오픈채팅 상담하기
