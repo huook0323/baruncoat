@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바른코트웍스 | 서울·경기 베란다 탄성코트·세라믹코트 시공</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; }
+        body { color: #333; line-height: 1.6; background-color: #f8fafc; padding: 20px 10px; }
+        .wrapper { max-width: 1000px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        
+        /* 최상단 연락처 및 지역 바 */
+        .top-contact-bar { background: #1e293b; color: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; flex-wrap: wrap; gap: 15px; border-radius: 8px; margin-bottom: 30px; }
+        .top-area { font-size: 16px; color: #cbd5e1; font-weight: 500; }
+        .top-area span { color: #fff; font-weight: 700; border-bottom: 1px solid #3b82f6; }
+        .top-phone-wrap { display: flex; align-items: center; gap: 15px; }
+        .top-phone-label { font-size: 15px; color: #94a3b8; }
+        .top-phone-number { font-size: 28px; font-weight: 700; color: #3b82f6; text-decoration: none; }
+
+        /* 메뉴바 */
+        .nav-bar { display: flex; gap: 25px; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 40px; flex-wrap: wrap; }
+        .nav-bar a { text-decoration: none; color: #64748b; font-size: 18px; font-weight: 500; }
+        .nav-bar a:hover, .nav-bar a.active { color: #2563eb; font-weight: 700; }
+
+        /* 메인 대표 이미지 영역 */
+        .hero-section { margin-bottom: 40px; border-radius: 8px; overflow: hidden; }
+        .hero-section img { width: 100%; height: auto; display: block; }
+
+        /* 핵심 세일즈 포인트 : A/S 보증 영역 */
+        .as-guarantee-section { background: #eff6ff; padding: 45px 30px; text-align: center; border: 1px solid #bfdbfe; border-radius: 8px; margin-bottom: 50px; }
+        .as-badge { display: inline-block; background: #2563eb; color: #fff; padding: 6px 16px; font-size: 14px; font-weight: 700; letter-spacing: 1px; margin-bottom: 15px; border-radius: 4px; }
+        .as-title { font-size: 28px; font-weight: 700; color: #1e293b; margin-bottom: 15px; }
+        .as-desc { font-size: 17px; color: #475569; max-width: 750px; margin: 0 auto; word-break: keep-all; }
+        .as-desc strong { color: #1d4ed8; }
+        
+        .section-title { font-size: 26px; font-weight: 700; color: #111; margin: 50px 0 25px; border-left: 5px solid #2563eb; padding-left: 15px; letter-spacing: -0.5px; }
+
+        /* 장점 카드 그리드 */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 50px; }
+        .card { background: #fff; border: 1px solid #e2e8f0; padding: 30px; border-top: 4px solid #1e293b; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        .card h3 { font-size: 19px; color: #0f172a; margin-bottom: 15px; font-weight: 700; }
+        .card p { font-size: 15px; color: #475569; word-break: keep-all; }
+
+        /* 비포/애프터 비교 텍스트 박스 */
+        .vs-container { display: flex; gap: 20px; background: #f8fafc; padding: 30px; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 20px; }
+        .vs-box { flex: 1; background: #fff; padding: 25px; border: 1px solid #e2e8f0; border-radius: 6px; }
+        .vs-box h4 { font-size: 18px; margin-bottom: 15px; color: #0f172a; text-align: center; font-weight: 700; border-bottom: 1px dashed #cbd5e1; padding-bottom: 12px; }
+        .vs-box.after h4 { color: #2563eb; }
+        .vs-box ul { list-style: none; padding-left: 0; }
+        .vs-box ul li { font-size: 15px; color: #475569; margin-bottom: 12px; padding-left: 22px; position: relative; }
+        .vs-box ul li::before { content: "✓"; position: absolute; left: 0; color: #94a3b8; font-weight: 700; }
+        .vs-box.after ul li::before { color: #2563eb; }
+
+        /* 비포/애프터 이미지 영역 */
+        .img-area { display: flex; gap: 20px; }
+        .img-item { flex: 1; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.03); }
+        .img-label { padding: 12px; font-weight: 700; color: #fff; text-align: center; font-size: 16px; letter-spacing: 1px; }
+        .img-item img { width: 100%; height: auto; display: block; }
+
+        /* 하단 공통 푸터 */
+        .site-footer { margin-top: 50px; background: #1e293b; color: #fff; text-align: center; padding: 40px 20px; border-radius: 8px; }
+        .footer-name { font-size: 18px; color: #94a3b8; margin-bottom: 10px; }
+        .footer-phone { font-size: 32px; font-weight: 700; margin-bottom: 25px; }
+        .footer-phone a { color: #3b82f6 !important; text-decoration: none; }
+        .kakao-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #FEE500; color: #371D1E; font-size: 18px; font-weight: 700; text-decoration: none; padding: 15px 30px; border-radius: 50px; transition: 0.3s; }
+        .kakao-btn img { width: 28px; height: 28px; }
+
+        /* 모바일 최적화 */
+        @media (max-width: 768px) {
+            .wrapper { padding: 20px; }
+            .top-contact-bar { flex-direction: column; align-items: flex-start; padding: 20px; }
+            .top-phone-number { font-size: 24px; }
+            .as-title { font-size: 24px; }
+            .vs-container { flex-direction: column; padding: 20px; }
+            .img-area { flex-direction: column; }
+            .footer-phone { font-size: 26px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        
+        <!-- 최상단 연락처 바 -->
+        <div class="top-contact-bar">
+            <div class="top-area">시공 가능 지역 : <span>서울 전 지역 및 경기 서북부 일대</span> (원거리 협의)</div>
+            <div class="top-phone-wrap">
+                <span class="top-phone-label">이현욱 팀장</span>
+                <a href="tel:010-4222-8535" class="top-phone-number">010-4222-8535</a>
+            </div>
+        </div>
+
+        <!-- 공통 메뉴바 (홈 활성화) -->
+        <div class="nav-bar">
+            <a href="index.html" class="active">홈</a>
+            <a href="about.html">시공소개</a>
+            <a href="gallery.html">시공사례</a>
+            <a href="estimate.html">표준견적</a>
+            <a href="certificate.html">시험성적표</a>
+        </div>
+
+        <!-- 메인 대표 이미지 -->
+        <div class="hero-section">
+            <img src="./images/main-banner.jpg" alt="바른코트웍스 시공 대표 이미지" onerror="this.src='https://placehold.co/1000x400/e2e8f0/64748b?text=Main+Banner+Image'">
+        </div>
+
+        <!-- 핵심 세일즈 포인트 : 1년 보증 안내 -->
+        <div class="as-guarantee-section">
+            <div class="as-badge">WARRANTY SERVICE</div>
+            <h2 class="as-title">확실한 사후관리, 1년 무상 A/S 보증</h2>
+            <p class="as-desc">
+                시공만 하고 사라지는 연락 두절 업체들과는 다릅니다. 바른코트웍스는 하청 없는 <strong>직영 전문팀 직접 시공</strong>을 책임 원칙으로 하며, 시공 완료 후 <strong>1년간 발생하는 하자에 대해 100% 무상 사후관리(A/S)를 약속</strong>합니다. 내 집을 작업한다는 마음가짐으로 끝까지 책임지겠습니다.
+            </p>
+        </div>
+
+        <!-- 세라믹코트 장점 설명 -->
+        <h2 class="section-title">베란다의 근본적인 문제 해결</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>왜 세라믹코트인가?</h3>
+                <p>일반 수성페인트는 습기를 머금고 부풀어 오르며 결국 떨어집니다. 바른코트웍스의 세라믹코트는 미세한 다공성 구조로 벽면이 스스로 숨을 쉬게 만들어 결로 현상을 원천적으로 억제합니다.</p>
+            </div>
+            <div class="card">
+                <h3>친환경 프리미엄 성분</h3>
+                <p>인체에 무해한 무기질 세라믹(돌가루) 성분과 특수 수지를 결합하여 제작됩니다. 유해물질 배출이 없으며 항균 및 항곰팡이 특수 첨가제로 쾌적한 환경을 유지합니다.</p>
+            </div>
+            <div class="card">
+                <h3>이런 고민을 해결합니다</h3>
+                <p>겨울철 창문 결로 현상, 구석진 곳의 검은 곰팡이와 악취, 시간이 지나며 떨어지는 페인트 가루 등 발코니 유지보수에 대한 모든 스트레스를 단 번의 시공으로 해결해 드립니다.</p>
+            </div>
+        </div>
+
+        <!-- 시공 전/후 특징 요약 텍스트 -->
+        <h2 class="section-title">시공 전과 후의 완벽한 변화</h2>
+        <div class="vs-container">
+            <div class="vs-box">
+                <h4>시공 전 (일반 환경)</h4>
+                <ul>
+                    <li>온도차로 인한 심각한 결로 발생</li>
+                    <li>지속적인 습기로 인한 곰팡이 증식</li>
+                    <li>페인트 들뜸 및 부식 현상</li>
+                    <li>콘크리트 벽면의 차가운 질감</li>
+                </ul>
+            </div>
+            <div class="vs-box after">
+                <h4>바른코트웍스 시공 후</h4>
+                <ul>
+                    <li>조습 기능으로 결로 현상 최소화</li>
+                    <li>항균 작용으로 곰팡이 원천 차단</li>
+                    <li>강력한 부착력으로 반영구적 수명</li>
+                    <li>대리석 느낌의 고급스러운 인테리어 효과</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 비포/애프터 이미지 세트 -->
+        <div class="img-area">
+            <div class="img-item">
+                <div class="img-label" style="background:#1e293b;">BEFORE (시공 전)</div>
+                <img src="./images/before.jpg" alt="시공 전" onerror="this.src='https://placehold.co/400x350/e2e8f0/64748b?text=Before'">
+            </div>
+            <div class="img-item">
+                <div class="img-label" style="background:#2563eb;">AFTER (시공 후)</div>
+                <img src="./images/after.jpg" alt="시공 후" onerror="this.src='https://placehold.co/400x350/e2e8f0/64748b?text=After'">
+            </div>
+        </div>
+
+        <!-- 하단 공통 연락처 (푸터) -->
+        <div class="site-footer">
+            <div class="footer-name">바른코트웍스 시공 상담</div>
+            <div class="footer-phone">이현욱 팀장 <a href="tel:010-4222-8535">010-4222-8535</a></div>
+            <a href="https://open.kakao.com/o/scSp5xFi" target="_blank" class="kakao-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt="카카오톡">
+                카카오톡 오픈채팅 상담하기
+            </a>
+        </div>
+
+    </div>
+</body>
+</html>
