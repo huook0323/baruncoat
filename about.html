@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바른코트웍스 | 시공소개</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; }
+        body { color: #333; line-height: 1.6; background-color: #f8fafc; padding: 20px 10px; }
+        .wrapper { max-width: 1000px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .nav-bar { display: flex; gap: 25px; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 40px; flex-wrap: wrap; }
+        .nav-bar a { text-decoration: none; color: #64748b; font-size: 18px; font-weight: 500; }
+        .nav-bar a:hover, .nav-bar a.active { color: #2563eb; font-weight: 700; }
+        .section-title { font-size: 26px; font-weight: 700; color: #111; margin-bottom: 30px; border-left: 5px solid #2563eb; padding-left: 15px; }
+
+        /* PPT 이미지 세로 나열 방식 */
+        .process-images { display: flex; flex-direction: column; gap: 20px; margin-bottom: 60px; align-items: center; }
+        .process-images img { max-width: 100%; height: auto; border: 1px solid #e2e8f0; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); display: block; }
+
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+        /* 하단 공통 푸터 */
+        .site-footer { margin-top: 50px; background: #1e293b; color: #fff; text-align: center; padding: 40px 20px; border-radius: 8px; }
+        .footer-name { font-size: 18px; color: #94a3b8; margin-bottom: 10px; }
+        .footer-phone { font-size: 32px; font-weight: 700; margin-bottom: 25px; }
+        .footer-phone a { color: #3b82f6 !important; text-decoration: none; }
+        .kakao-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #FEE500; color: #371D1E; font-size: 18px; font-weight: 700; text-decoration: none; padding: 15px 30px; border-radius: 50px; transition: 0.3s; }
+        .kakao-btn img { width: 28px; height: 28px; }
+        
+        @media (max-width: 768px) {
+            .footer-phone { font-size: 26px; }
+            .kakao-btn { font-size: 16px; padding: 12px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- 상단 메뉴바 -->
+        <div class="nav-bar">
+            <a href="index.html">홈</a>
+            <a href="about.html" class="active">시공소개</a>
+            <a href="gallery.html">시공사례</a>
+            <a href="estimate.html">표준견적</a>
+            <a href="certificate.html">시험성적표</a>
+        </div>
+
+        <h2 class="section-title">바른코트웍스 시공 과정</h2>
+        
+        <!-- PPT 이미지 4장 세로 나열 -->
+        <div class="process-images">
+            <img src="./images/about1.jpg" alt="시공과정 1" onerror="this.src='https://placehold.co/800x600/e2e8f0/64748b?text=PPT+Slide+1'">
+            <img src="./images/about2.jpg" alt="시공과정 2" onerror="this.src='https://placehold.co/800x600/e2e8f0/64748b?text=PPT+Slide+2'">
+            <img src="./images/about3.jpg" alt="시공과정 3" onerror="this.src='https://placehold.co/800x600/e2e8f0/64748b?text=PPT+Slide+3'">
+            <img src="./images/about4.jpg" alt="시공과정 4" onerror="this.src='https://placehold.co/800x600/e2e8f0/64748b?text=PPT+Slide+4'">
+        </div>
+
+        <h2 class="section-title">생생한 시공 현장 영상</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/vs63L8t-lXA" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- 하단 공통 연락처 -->
+        <div class="site-footer">
+            <div class="footer-name">바른코트웍스 시공 상담</div>
+            <div class="footer-phone">이현욱 팀장 <a href="tel:010-4222-8535">010-4222-8535</a></div>
+            <a href="https://open.kakao.com/o/scSp5xFi" target="_blank" class="kakao-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt="카카오톡">
+                카카오톡 오픈채팅 상담하기
+            </a>
+        </div>
+    </div>
+</body>
+</html>

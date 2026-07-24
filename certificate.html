@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바른코트웍스 | 시험성적표</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0; }
+        body { color: #333; line-height: 1.6; background-color: #f8fafc; padding: 20px 10px; }
+        .wrapper { max-width: 1000px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .nav-bar { display: flex; gap: 25px; border-bottom: 2px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 40px; flex-wrap: wrap; }
+        .nav-bar a { text-decoration: none; color: #64748b; font-size: 18px; font-weight: 500; }
+        .nav-bar a:hover, .nav-bar a.active { color: #2563eb; font-weight: 700; }
+        
+        .section-title { font-size: 24px; font-weight: 700; color: #111; margin: 50px 0 15px; border-left: 5px solid #2563eb; padding-left: 15px; }
+        .cert-desc { background: #eff6ff; padding: 20px; border-radius: 8px; margin-bottom: 20px; color: #334155; font-size: 15px; }
+        .cert-desc ul { margin-top: 10px; padding-left: 20px; color: #2563eb; font-weight: 500; }
+
+        .cert-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+        .cert-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; max-width: 600px; margin-bottom: 20px; }
+        .cert-item img { width: 100%; border: 1px solid #cbd5e1; padding: 5px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); border-radius: 4px; }
+        
+        /* 하단 공통 푸터 */
+        .site-footer { margin-top: 50px; background: #1e293b; color: #fff; text-align: center; padding: 40px 20px; border-radius: 8px; }
+        .footer-name { font-size: 18px; color: #94a3b8; margin-bottom: 10px; }
+        .footer-phone { font-size: 32px; font-weight: 700; margin-bottom: 25px; }
+        .footer-phone a { color: #3b82f6 !important; text-decoration: none; }
+        .kakao-btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #FEE500; color: #371D1E; font-size: 18px; font-weight: 700; text-decoration: none; padding: 15px 30px; border-radius: 50px; transition: 0.3s; }
+        .kakao-btn img { width: 28px; height: 28px; }
+        
+        @media (max-width: 768px) {
+            .cert-grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .cert-grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav-bar">
+            <a href="index.html">홈</a>
+            <a href="about.html">시공소개</a>
+            <a href="gallery.html">시공사례</a>
+            <a href="estimate.html">표준견적</a>
+            <a href="certificate.html" class="active">시험성적표</a>
+        </div>
+
+        <!-- 인증 1 -->
+        <h2 class="section-title">1. 항곰팡 및 결로 저항성 인증</h2>
+        <div class="cert-desc">
+            국가공인시험기관을 통해 곰팡이 저항성 테스트를 통과하였습니다. 결로로 인한 베란다 유해균 번식을 효과적으로 차단합니다.
+            <ul>
+                <li>곰팡이 저항성 최고 등급 획득</li>
+                <li>장기간 습윤 상태에서도 항균력 유지</li>
+            </ul>
+        </div>
+        <div class="cert-grid-4">
+            <div class="cert-item"><img src="./images/cert_mold1.jpg" alt="항곰팡이 1"></div>
+            <div class="cert-item"><img src="./images/cert_mold2.jpg" alt="항곰팡이 2"></div>
+            <div class="cert-item"><img src="./images/cert_mold3.jpg" alt="결로저항 1"></div>
+            <div class="cert-item"><img src="./images/cert_mold4.jpg" alt="결로저항 2"></div>
+        </div>
+
+        <!-- 인증 2 -->
+        <h2 class="section-title">2. 4대 중금속 및 유해물질 불검출</h2>
+        <div class="cert-desc">
+            납, 수은 등 인체에 치명적인 중금속 성분과 포름알데히드 등 새집증후군을 유발하는 휘발성 유기화합물(VOCs)이 검출되지 않은 안전한 자재입니다.
+            <ul>
+                <li>포름알데히드 완벽 불검출</li>
+                <li>영유아가 있는 세대도 안심 시공</li>
+            </ul>
+        </div>
+        <div class="cert-grid-2">
+            <div class="cert-item"><img src="./images/cert_heavy1.jpg" alt="중금속 1"></div>
+            <div class="cert-item"><img src="./images/cert_heavy2.jpg" alt="유해물질 2"></div>
+        </div>
+
+        <!-- 인증 3 -->
+        <h2 class="section-title">3. 건축자재 안전 인증</h2>
+        <div class="cert-desc">
+            실내공기질 시험을 통과한 자재에 부여되는 한국건설생활환경시험연구원 인증을 획득한 프리미엄 도료입니다.
+            <ul>
+                <li>실내 공기질 관리법 기준 완벽 충족</li>
+                <li>탄소 배출 저감 및 친환경 공정</li>
+            </ul>
+        </div>
+        <div class="cert-grid-2">
+            <div class="cert-item"><img src="./images/cert_safe1.jpg" alt="안전인증 1"></div>
+            <div class="cert-item"><img src="./images/cert_safe2.jpg" alt="안전인증 2"></div>
+        </div>
+
+        <!-- 하단 공통 연락처 -->
+        <div class="site-footer">
+            <div class="footer-name">바른코트웍스 시공 상담</div>
+            <div class="footer-phone">이현욱 팀장 <a href="tel:010-4222-8535">010-4222-8535</a></div>
+            <a href="https://open.kakao.com/o/scSp5xFi" target="_blank" class="kakao-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg" alt="카카오톡">
+                카카오톡 오픈채팅 상담하기
+            </a>
+        </div>
+    </div>
+</body>
+</html>
